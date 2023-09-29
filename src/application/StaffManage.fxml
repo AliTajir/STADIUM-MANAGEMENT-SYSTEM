@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StaffManage">
+   <center>
+      <AnchorPane prefHeight="350.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="billTable" prefHeight="350.0" prefWidth="900.0">
+              <columns>
+                <TableColumn fx:id="colRefNo" prefWidth="187.0" text="CNIC" />
+                  <TableColumn fx:id="colDueDate" prefWidth="118.0" text="Name" />
+                  <TableColumn fx:id="colBillType" prefWidth="167.0" text="Type" />
+                  <TableColumn fx:id="colPersonID" prefWidth="148.0" text="Duty" />
+                  <TableColumn fx:id="colPayment" minWidth="0.0" prefWidth="141.0" text="Pay" />
+                  <TableColumn fx:id="colBillStatus" prefWidth="137.0" text="Password" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="250.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="256.0" fitWidth="901.0" layoutX="-1.0" layoutY="-4.0">
+               <image>
+                  <Image url="@Pic/new.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="billRefNo" layoutX="46.0" layoutY="8.0" promptText="CNIC" />
+            <TextField fx:id="dueDate" layoutX="46.0" layoutY="43.0" promptText="Name" />
+            <TextField fx:id="billType" layoutX="46.0" layoutY="80.0" promptText="Type" />
+            <TextField fx:id="personID" layoutX="46.0" layoutY="113.0" promptText="Duty" />
+            <TextField fx:id="billPayment" layoutX="46.0" layoutY="155.0" promptText="Payment" />
+            <Button fx:id="Add" layoutX="248.0" layoutY="55.0" mnemonicParsing="false" onAction="#addBill" prefHeight="25.0" prefWidth="55.0" text="Add" />
+            <Button fx:id="Delete" layoutX="248.0" layoutY="100.0" mnemonicParsing="false" onAction="#removeBill" prefHeight="25.0" prefWidth="55.0" text="Delete" />
+            <Button fx:id="Update" layoutX="248.0" layoutY="142.0" mnemonicParsing="false" onAction="#updateBill" prefHeight="25.0" prefWidth="55.0" text="Update" />
+            <Button fx:id="Back" layoutX="512.0" layoutY="174.0" mnemonicParsing="false" onAction="#BackPage" prefHeight="25.0" prefWidth="55.0" text="Back" />
+            <Button fx:id="show" layoutX="762.0" layoutY="21.0" mnemonicParsing="false" onAction="#BillTable" text="Show Table" />
+            <Button fx:id="Edit" layoutX="668.0" layoutY="21.0" mnemonicParsing="false" onAction="#getSelectedRow" text="Edit " />
+            <Label fx:id="info" layoutX="248.0" layoutY="199.0" />
+            <TextField fx:id="billStatus" layoutX="46.0" layoutY="195.0" promptText="Password" />
+            <Button layoutX="386.0" layoutY="174.0" mnemonicParsing="false" onAction="#SalaryPage" text="Manage Salaries" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
